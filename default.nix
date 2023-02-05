@@ -1,4 +1,4 @@
 { system ? builtins.currentSystem
 }:
 
-(builtins.getFlake (toString ./.)).legacyPackages.${system}.jpg-store-bulk-purchase.project
+(builtins.getFlake (toString ./.)).legacyPackages.${system}.voomio-bulk-purchase.project

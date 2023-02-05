@@ -1,6 +1,6 @@
 import Test.Hspec
 import Prelude
-import Canonical.JpgStore.BulkPurchase
+import Canonical.Voomio.BulkPurchase
 import qualified PlutusTx.AssocMap as A
 import Plutus.V1.Ledger.Value
 

@@ -5,11 +5,11 @@
 let
   flake = builtins.getFlake (toString ./.);
   pkgs = flake.legacyPackages.${system};
-  inherit (pkgs.jpg-store-bulk-purchase.project.jpg-store-bulk-purchase) src;
-  inherit (pkgs.jpg-store-bulk-purchase) assets;
+  inherit (pkgs.voomio-bulk-purchase.project.voomio-bulk-purchase) src;
+  inherit (pkgs.voomio-bulk-purchase) assets;
 in
-pkgs.runCommand "jpg-store-bulk-purchase-${version}.tar.gz" { } ''
-  DIR=jpg-store-bulk-purchase-${version}
+pkgs.runCommand "voomio-bulk-purchase-${version}.tar.gz" { } ''
+  DIR=voomio-bulk-purchase-${version}
 
   mkdir -p $DIR
 

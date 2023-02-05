@@ -11,7 +11,7 @@
 {-# LANGUAGE TypeApplications #-}
 {-# LANGUAGE TypeFamilies #-}
 
-module Canonical.JpgStore.BulkPurchase
+module Canonical.Voomio.BulkPurchase
   ( ExpectedValue
   , Natural(..)
   , Payout(..)

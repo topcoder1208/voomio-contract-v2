@@ -31,9 +31,9 @@ jobs:
       - name: build release
         run: nix build --print-build-logs -f release.nix --argstr version ${{ env.RELEASE_VERSION }}
       - name: copy tarball
-        run: cp --no-preserve=all --dereference result jpg-store-bulk-purchase-${{ env.RELEASE_VERSION }}.tar.gz
+        run: cp --no-preserve=all --dereference result voomio-bulk-purchase-${{ env.RELEASE_VERSION }}.tar.gz
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-          files: jpg-store-bulk-purchase-${{ env.RELEASE_VERSION }}.tar.gz
+          files: voomio-bulk-purchase-${{ env.RELEASE_VERSION }}.tar.gz
 

@@ -740,7 +740,7 @@
         hedgehog-extras = ./.plan.nix/hedgehog-extras.nix;
         cardano-wallet-test-utils = ./.plan.nix/cardano-wallet-test-utils.nix;
         base-deriving-via = ./.plan.nix/base-deriving-via.nix;
-        jpg-store-bulk-purchase = ./.plan.nix/jpg-store-bulk-purchase.nix;
+        voomio-bulk-purchase = ./.plan.nix/voomio-bulk-purchase.nix;
         strict-stm = ./.plan.nix/strict-stm.nix;
         non-integral = ./.plan.nix/non-integral.nix;
         test-mint-scripts = ./.plan.nix/test-mint-scripts.nix;
@@ -888,7 +888,7 @@
           "base-deriving-via" = {
             flags = { "development" = lib.mkOverride 900 false; };
             };
-          "jpg-store-bulk-purchase" = {
+          "voomio-bulk-purchase" = {
             flags = { "defer-plugin-errors" = lib.mkOverride 900 false; };
             };
           "strict-stm" = {
@@ -983,7 +983,7 @@
       {
         packages = {
           "quickcheck-instances".components.library.planned = lib.mkOverride 900 true;
-          "jpg-store-bulk-purchase".components.library.planned = lib.mkOverride 900 true;
+          "voomio-bulk-purchase".components.library.planned = lib.mkOverride 900 true;
           "barbies".components.library.planned = lib.mkOverride 900 true;
           "quiet".components.library.planned = lib.mkOverride 900 true;
           "tdigest".components.library.planned = lib.mkOverride 900 true;
@@ -1167,7 +1167,7 @@
           "invariant".components.library.planned = lib.mkOverride 900 true;
           "cardano-ledger-alonzo".components.library.planned = lib.mkOverride 900 true;
           "generic-arbitrary".components.library.planned = lib.mkOverride 900 true;
-          "jpg-store-bulk-purchase".components.exes."integration-tests".planned = lib.mkOverride 900 true;
+          "voomio-bulk-purchase".components.exes."integration-tests".planned = lib.mkOverride 900 true;
           "bytestring-builder".components.library.planned = lib.mkOverride 900 true;
           "entropy".components.setup.planned = lib.mkOverride 900 true;
           "parallel".components.library.planned = lib.mkOverride 900 true;
@@ -1260,7 +1260,7 @@
           "simple-sendfile".components.library.planned = lib.mkOverride 900 true;
           "reducers".components.library.planned = lib.mkOverride 900 true;
           "safe".components.library.planned = lib.mkOverride 900 true;
-          "jpg-store-bulk-purchase".components.exes."create-smart-contract".planned = lib.mkOverride 900 true;
+          "voomio-bulk-purchase".components.exes."create-smart-contract".planned = lib.mkOverride 900 true;
           "servant".components.library.planned = lib.mkOverride 900 true;
           "ListLike".components.library.planned = lib.mkOverride 900 true;
           "conduit-extra".components.library.planned = lib.mkOverride 900 true;

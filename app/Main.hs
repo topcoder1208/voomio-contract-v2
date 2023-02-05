@@ -2,7 +2,7 @@ module Main where
 
 import Options.Applicative
 
-import Canonical.JpgStore.BulkPurchase
+import Canonical.Voomio.BulkPurchase
 
 type Opts = FilePath
 

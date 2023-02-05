@@ -2,16 +2,16 @@ final: prev:
 
 let
   project = final.callPackage ./project.nix { };
-  inherit (project.jpg-store-bulk-purchase.components.exes)
+  inherit (project.voomio-bulk-purchase.components.exes)
     integration-tests
     create-smart-contract;
   cardano-cli = "${prev.cardano-cli}/bin/cardano-cli";
 in
 {
-  jpg-store-bulk-purchase = {
+  voomio-bulk-purchase = {
     inherit project integration-tests create-smart-contract;
 
-    assets = final.runCommand "jpg-store-bulk-purchase-assets" { } ''
+    assets = final.runCommand "voomio-bulk-purchase-assets" { } ''
       mkdir -p $out/{mainnet,testnet}
 
       ${create-smart-contract}/bin/create-smart-contract $out/swap.plutus

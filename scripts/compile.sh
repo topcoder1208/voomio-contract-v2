@@ -14,5 +14,5 @@ cardano-cli address build \
 
 cardano-cli address build \
   --payment-script-file $mainDir/assets/swap.plutus \
-  --testnet-magic 1097911063 \
+  --testnet-magic 1 \
   --out-file $mainDir/assets/testnet/swap.addr

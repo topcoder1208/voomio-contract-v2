@@ -1,4 +1,4 @@
-# jpg.store Contract v2
+# voomio Contract
 
 ## Assets
 

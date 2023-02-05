@@ -34,11 +34,11 @@
 
             (import ./nix/haskell)
           ];
-          inherit (pkgs.jpg-store-bulk-purchase) project update-materialized;
+          inherit (pkgs.voomio-bulk-purchase) project update-materialized;
 
           flake = project.flake { };
 
-          hsTools = project.tools (import ./nix/haskell/tools.nix { inherit (pkgs.jpg-store-bulk-purchase.project) index-state; });
+          hsTools = project.tools (import ./nix/haskell/tools.nix { inherit (pkgs.voomio-bulk-purchase.project) index-state; });
 
           pre-commit = pkgs.callPackage ./nix/pre-commit-hooks.nix { inherit pre-commit-hooks hsTools; };
 
@@ -49,12 +49,12 @@
           };
 
           # so `nix build` will build the exe
-          # defaultPackage = flake.packages."jpg-store-bulk-purchase:exe:jpg-store-bulk-purchase";
+          # defaultPackage = flake.packages."voomio-bulk-purchase:exe:voomio-bulk-purchase";
 
           # so `nix run`  will run the exe
           defaultApp = {
             # type = "app";
-            # program = "${flake.packages."jpg-store-bulk-purchase:exe:jpg-store-bulk-purchase"}/bin/jpg-store-bulk-purchase";
+            # program = "${flake.packages."voomio-bulk-purchase:exe:voomio-bulk-purchase"}/bin/voomio-bulk-purchase";
           };
 
           apps = {

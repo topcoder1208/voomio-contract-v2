@@ -8,7 +8,7 @@ haskell-nix.project {
   inherit (plutus.plutus-apps.haskell) compiler-nix-name;
 
   src = haskell-nix.haskellLib.cleanGit {
-    name = "jpg-store-bulk-purchase-src";
+    name = "voomio-bulk-purchase-src";
     src = ../..;
   };
 

@@ -40,7 +40,7 @@ import qualified PlutusTx.Functor as P
 import qualified PlutusTx.Prelude as P
 import qualified PlutusTx.AssocMap as M
 
-import Canonical.JpgStore.BulkPurchase
+import Canonical.Voomio.BulkPurchase
 import Plutus.V1.Ledger.Credential
 import AlwaysSucceed
 

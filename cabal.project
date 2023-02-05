@@ -55,7 +55,7 @@ test-show-details: direct
 
 -- Then enable specific tests in this repo
 
-package jpg-store-bulk-purchase
+package voomio-bulk-purchase
   tests: True
 
 package cardano-api
