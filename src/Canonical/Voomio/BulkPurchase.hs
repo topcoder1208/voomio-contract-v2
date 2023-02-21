@@ -30,7 +30,16 @@ module Canonical.Voomio.BulkPurchase
 {- HLINT ignore module "Avoid lambda" -}
 
 import Canonical.Shared
-import Cardano.Api (ScriptData, scriptDataToJson, ScriptDataJsonSchema( ScriptDataJsonDetailedSchema ))
+import Cardano.Api (
+                      ScriptData, 
+                      ScriptDataJsonSchema( ScriptDataJsonDetailedSchema ), 
+                      ScriptDataConstructor, 
+                      ScriptDataMap,
+                      ScriptDataList,
+                      ScriptDataNumber,
+                      ScriptDataBytes,
+                      scriptDataToJson 
+                    )
 import qualified Cardano.Api as Api
 import Cardano.Api.Shelley (PlutusScript(..), PlutusScriptV2)
 import Codec.Serialise (serialise)
