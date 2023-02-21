@@ -1,5 +1,5 @@
 export CARDANO_NODE_SOCKET_PATH="/opt/cardano/cnode/sockets/node0.socket"
 export SOURCE_WALLET_ADDRESS_PATH=addr_test1vqu3wfxvmkume0lvqpu47duvykl3n7p3fj3s227jw4452xgfgls2x
-export SOURCE_WALLET_SKEY_PATH=$HOME/testnet/marketplace.skey
+export SOURCE_WALLET_SKEY_PATH=$HOME/testnet/seller.skey
 export TESTNET_MAGIC=1
 export WALLET_DIR=$PWD/temp/testnet
