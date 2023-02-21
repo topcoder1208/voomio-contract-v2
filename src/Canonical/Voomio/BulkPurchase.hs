@@ -38,7 +38,7 @@ import Cardano.Api (
 import qualified Cardano.Api as Api
 import Cardano.Api.Shelley (PlutusScript(..), PlutusScriptV2)
 import Codec.Serialise (serialise)
-import Data.Aeson (decode, encode)
+import Data.Aeson (encode)
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.ByteString.Short as SBS
 import           Plutus.V1.Ledger.Crypto
