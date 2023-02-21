@@ -23,6 +23,7 @@ module Canonical.Voomio.BulkPurchase
   , writePlutusFile
   , unionExpectedValue
   , satisfyExpectations
+  , writeJSON
   ) where
 
 {- HLINT ignore module "Eta reduce" -}
@@ -40,6 +41,7 @@ import           Plutus.V1.Ledger.Scripts
 import           Plutus.V2.Ledger.Tx
 import Plutus.V1.Ledger.Credential
 import Plutus.V1.Ledger.Value
+import PlutusTx (Data (..))
 import PlutusTx
 import qualified PlutusTx.AssocMap as M
 import PlutusTx.AssocMap (Map)
@@ -50,6 +52,15 @@ import PlutusTx.These
 import qualified Plutonomy
 
 #include "../DebugUtilities.h"
+
+
+dataToScriptData :: Data -> ScriptData
+dataToScriptData (Constr n xs) = ScriptDataConstructor n $ dataToScriptData <$> xs
+dataToScriptData (Map xs)      = ScriptDataMap [(dataToScriptData x, dataToScriptData y) | (x, y) <- xs]
+dataToScriptData (List xs)     = ScriptDataList $ dataToScriptData <$> xs
+dataToScriptData (I n)         = ScriptDataNumber n
+dataToScriptData (B bs)        = ScriptDataBytes bs
+
 
 newtype WholeNumber = WholeNumber { unWholeNumber :: Integer }
   deriving(Eq, AdditiveSemigroup, Ord, ToData)
@@ -381,3 +392,6 @@ writePlutusFile :: FilePath -> IO ()
 writePlutusFile filePath = Api.writeFileTextEnvelope filePath Nothing swap >>= \case
   Left err -> print $ Api.displayError err
   Right () -> putStrLn $ "wrote NFT validator to file " ++ filePath
+
+writeJSON :: PlutusTx.ToData a => FilePath -> a -> IO ()
+writeJSON file = LB.writeFile file . encode . scriptDataToJson ScriptDataJsonDetailedSchema . dataToScriptData . PlutusTx.toData
