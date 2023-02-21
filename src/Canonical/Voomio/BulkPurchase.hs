@@ -31,13 +31,8 @@ module Canonical.Voomio.BulkPurchase
 
 import Canonical.Shared
 import Cardano.Api (
-                      ScriptData, 
-                      ScriptDataJsonSchema( ScriptDataJsonDetailedSchema ), 
-                      ScriptDataConstructor, 
-                      ScriptDataMap,
-                      ScriptDataList,
-                      ScriptDataNumber,
-                      ScriptDataBytes,
+                      ScriptData (..), 
+                      ScriptDataJsonSchema( ScriptDataJsonDetailedSchema ),
                       scriptDataToJson 
                     )
 import qualified Cardano.Api as Api
