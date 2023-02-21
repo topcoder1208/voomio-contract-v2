@@ -31,7 +31,7 @@ module Canonical.Voomio.BulkPurchase
 
 import Canonical.Shared
 import qualified Cardano.Api as Api
-import Cardano.Api.Shelley (PlutusScript(..), PlutusScriptV2)
+import Cardano.Api.Shelley (PlutusScript(..), PlutusScriptV2, ScriptData)
 import Codec.Serialise (serialise)
 import qualified Data.ByteString.Lazy as LB
 import qualified Data.ByteString.Short as SBS
