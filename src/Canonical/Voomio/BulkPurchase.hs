@@ -47,7 +47,6 @@ import           Plutus.V1.Ledger.Scripts
 import           Plutus.V2.Ledger.Tx
 import Plutus.V1.Ledger.Credential
 import Plutus.V1.Ledger.Value
-import PlutusTx (Data (..))
 import PlutusTx
 import qualified PlutusTx.AssocMap as M
 import PlutusTx.AssocMap (Map)
