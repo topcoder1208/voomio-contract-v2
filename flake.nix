@@ -53,8 +53,8 @@
 
           # so `nix run`  will run the exe
           defaultApp = {
-            # type = "app";
-            # program = "${flake.packages."voomio-bulk-purchase:exe:voomio-bulk-purchase"}/bin/voomio-bulk-purchase";
+            type = "app";
+            program = "${flake.packages."voomio-bulk-purchase:exe:voomio-bulk-purchase"}/bin/voomio-bulk-purchase";
           };
 
           apps = {
