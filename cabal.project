@@ -311,8 +311,8 @@ source-repository-package
 source-repository-package
   type: git
   location: https://github.com/well-typed/plutonomy.git
-  tag: 6c01302ba8cf3be4f71617e106cd5ef7ed10fc63
-  --sha256: 1lc1f3haqvsaarcgy87m31zfzzvjs1ly21k5jr43fj3dr5wjwkvx
+  tag: 7ce62857c9fcad4465de66a36d4343d6e02b2a86
+  --sha256: 0y60h988pm6s0lf6cynj16rgq5gi7r6x6ifvf84gpzql5dcv34d1
 
 package plutonomy
   flags: +plutus-f680ac697
