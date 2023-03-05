@@ -333,6 +333,7 @@ source-repository-package
   type: git
   location: https://github.com/Canonical-LLC/test-mint-scripts
   tag: dd3c5d3c5085179af6d6b0ab2ed17c41ad2c11ae
+  --sha256: 0zp0xw1gyjx9vw4h0nnnm2vy3layvw2xq78y51chbgzl6m5y5jah
 
 constraints:
     hedgehog >= 1.0
