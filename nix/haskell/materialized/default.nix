@@ -452,7 +452,7 @@
         "persistent-sqlite".flags.use-pkgconfig = false;
         "persistent-sqlite".flags.full-text-search = true;
         "persistent-sqlite".flags.systemlib = false;
-        "aeson".revision = (((hackage."aeson")."2.0.2.0").revisions).default;
+        "aeson".revision = (((hackage."aeson")."1.5.6.0").revisions).default;
         "aeson".flags.developer = false;
         "aeson".flags.bytestring-builder = false;
         "aeson".flags.fast = false;
